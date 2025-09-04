@@ -1,3 +1,12 @@
+# rApp_Bitcoin-Miner
+
+Pilotprojekt für eine modulare Krypto-Mining-Plattform mit Bankintegration, Wallet-Verteilung und Inflationschart.
+- Passwortgeschützt
+- Ohne Accounts, aber erweiterbar
+- 50% Rendite auf Bankkonto & Wallet
+- Nach Pilotphase: 10% GmbH, 40% RFOF Blockchain
+
+
 # UnifiedMining-
 InterBOxSpiderWeb.NET PRVPNRFAI.py 2025 - 2029
 
