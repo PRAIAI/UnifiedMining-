@@ -1,3 +1,5 @@
+// app.js
+
 document.addEventListener("DOMContentLoaded", () => {
   const amountInput = document.getElementById("amount");
   const currencySelect = document.getElementById("currency");
@@ -35,12 +37,28 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // 📊 Chart-Placeholder initialisieren
   if (inflationChartDiv) {
-    inflationChartDiv.innerHTML = `
-      import { renderGoldChart } from './charts/goldChart.js';
+  inflationChartDiv.innerHTML = "⏳ Lade Goldpreis...";
 
-document.addEventListener("DOMContentLoaded", () => {
-  renderGoldChart("inflationChart"); // Container aus index.html
-});
-    `;
-  }
-});
+  fetch("https://www.goldapi.io/api/XAU/USD", {
+    headers: {
+      "x-access-token": "goldapi-5qxnj19mf5oqybo-io",
+      "Content-Type": "application/json"
+    }
+  })
+    .then(response => response.json())
+    .then(data => {
+      if (!data || !data.price) {
+        inflationChartDiv.innerHTML = "⚠️ Keine Preisdaten verfügbar.";
+        return;
+      }
+
+      inflationChartDiv.innerHTML = `
+        🪙 <strong>Goldpreis:</strong> ${data.price} USD / Unze<br>
+        📅 <em>Letzte Aktualisierung:</em> ${data.timestamp}
+      `;
+    })
+    .catch(error => {
+      inflationChartDiv.innerHTML = "❌ Fehler beim Laden des Goldcharts.";
+      console.error("GoldAPI Fehler:", error);
+    });
+}
