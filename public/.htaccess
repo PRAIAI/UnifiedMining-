@@ -1,4 +1,0 @@
-AuthType Basic
-AuthName "Zugang nur für autorisierte Tester"
-AuthUserFile /pfad/zum/.htpasswd
-Require valid-user
