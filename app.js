@@ -1,3 +1,4 @@
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 // Chart.js Initialisierung
 const ctx = document.getElementById("myChart").getContext("2d");
 const myChart = new Chart(ctx, {
