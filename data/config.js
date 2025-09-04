@@ -1,4 +1,7 @@
 {
+  "goldApiKey": "goldapi-5qxnj19mf5oqybo-io"
+}
+{
   "ibanPrimary": "DE",
   "ibanGmbH": "DE",
   "walletPionex": "0x833EF537868AC2b2f3C068f8a6Fcb7e0B466f148",
