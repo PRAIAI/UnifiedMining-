@@ -50,6 +50,6 @@ fetch("https://www.goldapi.io/api/status", requestOptions)
   .then(response => response.text())
   .then(result => console.log(result))
   .catch(error => console.log('error', error));
-}
-                          });
+{
+  "result": true
 }
