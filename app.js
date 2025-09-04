@@ -1,3 +1,5 @@
+// app.js
+
 document.addEventListener("DOMContentLoaded", () => {
   const amountInput = document.getElementById("amount");
   const currencySelect = document.getElementById("currency");
@@ -36,11 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // 📊 Chart-Placeholder initialisieren
   if (inflationChartDiv) {
     inflationChartDiv.innerHTML = `
-      import { renderGoldChart } from './charts/goldChart.js';
-
-document.addEventListener("DOMContentLoaded", () => {
-  renderGoldChart("inflationChart"); // Container aus index.html
-});
+      📈 <em>Inflationsdaten werden bald dynamisch geladen...</em>
     `;
   }
 });
