@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>UnifiedMining</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/main.css" />
   <style>
     body {
       margin: 0;
@@ -78,14 +79,13 @@
         <option>¢</option>
       </select>
 
-      <button onclick="calculateYield()">Mining starten</button>
-
+      <button id="startMining">Mining starten</button>
       <div id="result" style="margin-top:1rem;"></div>
     </div>
 
     <div class="card">
       <h2>📊 InterBOxSpider@Web.NET Inflationschart</h2>
-      <div class="chart-placeholder">
+      <div id="inflationChart" class="chart-placeholder">
         Inflationsdaten werden geladen...
       </div>
     </div>
@@ -94,27 +94,11 @@
       <h2>🔐 Wallet Integration</h2>
       <p>Deine Rendite wird monatlich zu 50 % in BTC auf deine Wallet gesendet.</p>
       <p><strong>Aktuelle Wallet:</strong> Pionex (wird ersetzt durch BTC-kompatible Wallet)</p>
-      <button onclick="connectWallet()">Wallet verbinden</button>
+      <button id="connectWallet">Wallet verbinden</button>
+      <div id="walletStatus"></div>
     </div>
   </div>
 
-  <script>
-    function calculateYield() {
-      const amount = parseFloat(document.getElementById('amount').value);
-      if (isNaN(amount) || amount < 100) {
-        document.getElementById('result').innerText = "Bitte mindestens 100 investieren.";
-        return;
-      }
-      const monthlyYield = (amount  0.05)  0.5;
-      document.getElementById('result').innerText =
-        Du erhältst monatlich ca. ${monthlyYield.toFixed(2)} in BTC auf deine Wallet.;
-    }
-
-    function connectWallet() {
-      alert("Wallet-Verbindung wird vorbereitet. BTC-kompatible Wallets folgen bald.");
-    }
-    <script src="app.js"></script>
-  </script>
+  <script type="module" src="./app.js"></script>
 </body>
 </html>
-  
