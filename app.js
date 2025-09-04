@@ -36,11 +36,11 @@ document.addEventListener("DOMContentLoaded", () => {
   // 📊 Chart-Placeholder initialisieren
   if (inflationChartDiv) {
     inflationChartDiv.innerHTML = `
-      📈 <em>import { renderGoldChart } from './charts/goldChart.js';
+      import { renderGoldChart } from './charts/goldChart.js';
 
 document.addEventListener("DOMContentLoaded", () => {
   renderGoldChart("inflationChart"); // Container aus index.html
-});</em>
+});
     `;
   }
 });
