@@ -57,3 +57,55 @@ rApp_Bitcoin-Miner/
 
 ---
 ````
+
+
+
+
+
+# PILOTEN PHASE:
+
+````
+---
+rApp_Bitcoin-Miner/
+│
+├── index.html                    # Jetzt direkt im Root!
+│
+├── .htaccess                     # Optional: Apache Passwortschutz
+├── .htpasswd                     # Optional: Benutzer & Passwort
+│
+├── 📁 modules/
+│   ├── bankTransfer.js
+│   ├── postPilotDistribution.js
+│   └── walletUtils.js
+│
+├── 📁 auth/
+│   ├── passwordGate.js
+│   └── sessionManager.js
+│
+├── 📁 users/
+│   └── README.md
+│
+├── 📁 charts/
+│   ├── goldChart.js
+│   └── inflationChart.js
+│
+├── 📁 styles/
+│   └── main.css
+│
+├── 📁 deploy/
+│   ├── docker-compose.yml
+│   └── vercel.json
+│
+├── 📁 data/
+│   └── config.json
+│
+├── 📁 assets/
+│   └── logo.svg
+│
+├── 📁 chat/
+│   └── prompt.txt
+│
+├── app.js
+└── README.md
+---
+````
